@@ -1,0 +1,220 @@
+.quiz-container {
+    max-width: 900px;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.quiz-area {
+    margin-top: 2rem;
+}
+
+.question-card {
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.question-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-list li {
+    margin-bottom: 0.8rem;
+}
+
+.option-label {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid #E5E7EB;
+}
+
+.option-label:hover {
+    background-color: rgba(var(--primary-blue), 0.05);
+    color: var(--primary-blue);
+}
+
+.option-label input[type="radio"] {
+    margin-right: 0.8rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.question-card.correct-answer .option-label.selected {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+}
+
+.question-card.incorrect-answer .option-label.selected {
+    background-color: #FEE2E2;
+    border-color: #EF4444;
+    color: #EF4444;
+}
+
+.question-card.incorrect-answer .option-label.correct {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.quiz-controls {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.submit-button, .retake-button {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover, .retake-button:hover {
+    background-color: #1D54DA;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:disabled {
+    background-color: #A3B3C7;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.quiz-result {
+    margin-top: 3rem;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid #E0E7EB;
+}
+
+.quiz-result.hidden {
+    display: none;
+}
+
+.result-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.score-display {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.score-display #score-value {
+    color: var(--primary-green);
+    font-size: 2.2rem;
+}
+
+.feedback-area {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.feedback-area .question-feedback {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+}
+
+.feedback-area .question-feedback.correct {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+}
+
+.feedback-area .question-feedback.incorrect {
+    background-color: #FEE2E2;
+    border-color: #EF4444;
+}
+
+.feedback-area .feedback-question-text {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.feedback-area .your-answer, .feedback-area .correct-answer-text {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+}
+
+.feedback-area .your-answer strong {
+    color: var(--primary-blue);
+}
+
+.feedback-area .correct-answer-text strong {
+    color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .question-card {
+        padding: 1.5rem;
+    }
+    .question-text {
+        font-size: 1.1rem;
+    }
+    .option-label {
+        font-size: 1rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .submit-button, .retake-button {
+        padding: 0.7rem 1.8rem;
+        font-size: 1rem;
+    }
+    .result-title {
+        font-size: 1.6rem;
+    }
+    .score-display {
+        font-size: 1.4rem;
+    }
+    .score-display #score-value {
+        font-size: 1.8rem;
+    }
+    .feedback-area .question-feedback {
+        padding: 0.8rem;
+    }
+}

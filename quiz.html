@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Quiz</title>
+    <link rel="stylesheet" href="assets/styles.css"> 
+    <link rel="stylesheet" href="assets/quiz-styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">Web Evolution</div>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+            <div class="globe-icon">🌐</div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="quiz-section" class="content-section bg-light-section">
+            <div class="container quiz-container">
+                <h2 class="section-heading">Test Your Knowledge</h2>
+                <p class="section-subheading">Answer the questions to see how well you know web technologies!</p>
+
+                <div id="quiz-area" class="quiz-area">
+                    
+                </div>
+
+                <div id="quiz-controls" class="quiz-controls">
+                    <button id="submit-quiz-btn" class="submit-button">Submit Quiz</button>
+                </div>
+
+                <div id="quiz-result" class="quiz-result hidden">
+                    <h3 class="result-title">Your Quiz Result</h3>
+                    <p class="score-display">You scored <span id="score-value">0</span> out of <span id="total-questions">0</span>.</p>
+                    <div id="feedback-area" class="feedback-area">
+                        
+                    </div>
+                    <button id="retake-quiz-btn" class="retake-button">Retake Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; gmorman Milestone IT 3203 Web Evolution. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script> <!-- Your main script.js for nav toggle etc. -->
+    <script src="assets/quiz-script.js"></script> <!-- Quiz specific JavaScript -->
+</body>
+</html>
